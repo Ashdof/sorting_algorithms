@@ -1,5 +1,6 @@
 #include "sort.h"
 #include <stddef.h>
+#include <stdbool.h>
 
 void exchange(int *x, int *y);
 
@@ -21,20 +22,26 @@ void exchange(int *x, int *y);
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
+	bool exchanged;
 
 	if (array == NULL || size < 2)
 		return;
 
 	for (i = 0; i < size - 1; i++)
 	{
+		exchanged = false;
 		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
 				exchange(&array[j], &array[j + 1]);
+				echanged = true;
 				print_array(array, size);
 			}
 		}
+
+		if (exchanged == false)
+			break;
 	}
 }
 
