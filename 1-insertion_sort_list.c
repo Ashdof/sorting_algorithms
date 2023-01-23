@@ -38,8 +38,9 @@ void insertion_sort_list(listint_t **list)
 
 /**
  * exchange - swap two values
- * @x: a reference to the first value
- * @y: a reference to the second value
+ * @h: a reference to the head of the linked list
+ * @n1: a reference to the first value
+ * @n2: a reference to the second value
  *
  * Description: this function swaps the positions of two values
  * passed to it via its arguments. It actually works with the
